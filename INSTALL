@@ -1,0 +1,26 @@
+To build and install the Squid Cache, type:
+
+	% ./configure --prefix=/usr/local/squid
+        % make all
+        % make install
+
+To run a Cache, you will need to:
+
+	1. customize the squid.conf configuration file:
+	      % vi /usr/local/squid/etc/squid.conf
+
+	2. Initalise the cache:
+	      % /usr/local/squid/sbin/squid -z
+	      
+	3. start the cache:
+	      % /usr/local/squid/sbin/squid
+
+If you want to use the WWW interface to the Cache Manager, copy
+the cachemgr.cgi program into your httpd server's cgi-bin
+directory.
+compilado no debian 8 jessie
+./configure --prefix=/usr --includedir=/usr/include --mandir=/usr/share/man --infodir=/usr/share/info --sysconfdir=/etc --localstatedir=/var --libexecdir=/usr/lib/squid3 --datadir=/usr/share/squid3 --sysconfdir=/etc/squid3 --mandir=/usr/share/man --with-swapdir=/var/spool/squid3 --with-logdir=/var/log/squid3 --with-pidfile=/var/run/squid3.pid --with-filedescriptors=65536 --with-large-files --with-default-user=proxy && make all && make install
+
+DEP
+apt-get install automake -y #1.14
+apt-get install build-essential libssl-dev apache2-utils -y

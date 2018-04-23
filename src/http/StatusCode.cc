@@ -27,7 +27,7 @@ Http::StatusCodeString(const Http::StatusCode status)
 
         // 200-299
     case Http::scOkay:
-        return "<font color='#9933FF'>Proxy Conectado </font><a href='//t.me/InfinitySSHBR'><font color='green'>PREMIUM</font></a>";
+        return "<font color='#9933FF'>Proxy Conectado </font><a href='//t.me/InfinitySSHBR'><font color='green'>@InfinitySSHSmartBot - FREE</font></a>";
         break;
 
     case Http::scCreated:

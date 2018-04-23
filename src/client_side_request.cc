@@ -1599,7 +1599,7 @@ ClientHttpRequest::sslBumpStart()
 
     // send an HTTP 200 response to kick client SSL negotiation
     // TODO: Unify with tunnel.cc and add a Server(?) header
-    static const char *const conn_established = "HTTP/1.1 200 <font color='#9933FF'>Proxy Conectado </font><a href='//t.me/InfinitySSHBR'><font color='green'>PREMIUM</font></a>\r\n\r\n";
+    static const char *const conn_established = "HTTP/1.1 200 <font color='#9933FF'>Proxy Conectado </font><a href='//t.me/InfinitySSHBR'><font color='green'>@InfinitySSHSmartBot - FREE</font></a>\r\n\r\n";
     AsyncCall::Pointer call = commCbCall(85, 5, "ClientSocketContext::sslBumpEstablish",
                                          CommIoCbPtrFun(&SslBumpEstablish, this));
     Comm::Write(getConn()->clientConnection, conn_established, strlen(conn_established), call, NULL);
